@@ -1,7 +1,3 @@
-user "pi" do
-    action :remove
-end
-
 # nginx and uwsgi
 cookbook_file "/etc/uwsgi/apps-available/bartendro.ini" do
   source "bartendro.ini"
