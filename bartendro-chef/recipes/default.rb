@@ -1,18 +1,6 @@
 include_recipe "sudo"
 package "libshadow-ruby1.8"
 
-user "bartendro" do
-    comment "Bartendro"
-    home "/home/bartendro"
-    supports :manage_home => true
-    shell "/bin/bash"
-    password "$6$gknhrhy8$BH4nVjq4QMk0HOw1GSjbo.7K17zTuuD6OCMDMildlbjRdrKsfHjPi3UUbbZgk.BmmuQl3th8TpmdQMb1fHB9D."
-end
-
-sudo "bartendro" do
-    user "bartendro"
-end
-
 # install specific system files
 cookbook_file "/boot/cmdline.txt" do
   source "cmdline.txt"
