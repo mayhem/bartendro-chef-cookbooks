@@ -1,7 +1,7 @@
 # must be run after reboot
-#user "pi" do
-#    action: remove
-#end
+user "pi" do
+    action :remove
+end
 
 bash "set the time, save to hardware clock" do
   code <<-EOL
