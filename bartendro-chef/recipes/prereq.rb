@@ -16,6 +16,8 @@ package "python-rpi.gpio"
 package "python-flask"
 package "sqlite3"
 package "libshadow-ruby1.8"
+package "dnsmasq"
+package "hostapd"
 
 user "bartendro" do
     comment "Bartendro"
