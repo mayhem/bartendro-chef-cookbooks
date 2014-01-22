@@ -1,0 +1,6 @@
+[submodule "bartendro"]
+	path = bartendro
+	url = https://github.com/partyrobotics/bartendro.git
+[submodule "sudo"]
+	path = sudo
+	url = https://github.com/opscode-cookbooks/sudo.git
