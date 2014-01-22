@@ -13,21 +13,6 @@ sudo "bartendro" do
     user "bartendro"
 end
 
-user "pi" do
-    action: remove
-end
-
-directory "/usr/local/logstash" do
-  owner "root"
-  group "root"
-  mode 0755
-  action :create
-end
-
-# run this
-ntpdate
-sudo hwclock -w
-
 # install specific system files
 cookbook_file "/boot/cmdline.txt" do
   source "cmdline.txt"
