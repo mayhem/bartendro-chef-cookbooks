@@ -1,0 +1,17 @@
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+iface wlan0 inet static
+     pre-up iptables-restore < /etc/iptables.rules
+     address 10.0.0.1
+     netmask 255.255.255.0
+
+#If you want to route traffic, add this bridge and uncomment last line in hostapd.conf
+#iface br0 inet static
+#     bridge_ports eth0 wlan0
+#     address 10.1.1.198
+#     netmask 255.255.255.0
+#     gateway 10.1.1.1
+#     dns-nameservers 10.1.1.1
