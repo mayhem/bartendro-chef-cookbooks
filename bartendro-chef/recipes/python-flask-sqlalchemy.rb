@@ -26,7 +26,7 @@ end
 installed_file_path = File.join(uncompressed_file_dir, "installed")
 
 execute "install python sqlalchemy module" do
-  command "python setup.py install"
+  command "python2.7 setup.py install"
   cwd uncompressed_file_dir
   not_if { File.exists?(installed_file_path) }
 end

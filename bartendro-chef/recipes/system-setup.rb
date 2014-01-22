@@ -5,6 +5,7 @@ cookbook_file "/boot/cmdline.txt" do
   owner "root"
   mode "0755"
 end
+
 cookbook_file "/etc/inittab" do
   source "inittab"
   group "root"
@@ -60,6 +61,13 @@ cookbook_file "/etc/dnsmasq.conf" do
   group "root"
   owner "root"
   mode "0755"
+end
+
+directory "/etc/hostapd" do
+  owner "root"
+  group "root"
+  mode 0755
+  action :create
 end
 
 cookbook_file "/etc/hostapd/hostapd.conf" do
